@@ -6,7 +6,7 @@ await expect(product_name).toHaveText("KETCH")
 const product_price=await page.locator('(//span[@class="product-discountedPrice"])[1]')
 await expect(product_price).toHaveText("Rs. 278")
 })
-test.only("Minthra Application ",async({page})=>{
+test("Minthra Application ",async({page})=>{
     await page.goto('https://www.myntra.com/mens-casual-wear?f=Brand%3AHIGHLANDER%2CKETCH&rawQuery=men%27s%20casual%20wear&sort=discount')
    //to print all product names by using alltextcontents
    // const product_names= await page.locator('//h3[@class="product-brand"]').allTextContents()
