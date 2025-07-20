@@ -1,6 +1,6 @@
 import {test,expect,chromium,firefox,webkit} from '@playwright/test'
 test.describe("Working with newContext",()=>{
- test.only("Working With NewContext Like user And Admin On One Applications",async({page})=>{
+ test("Working With NewContext Like user And Admin On One Applications",async({page})=>{
       const browser=await chromium.launch()
       const context1=await browser.newContext()
       const context2=await browser.newContext()

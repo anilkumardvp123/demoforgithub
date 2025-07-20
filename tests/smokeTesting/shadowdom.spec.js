@@ -7,7 +7,7 @@ test("Working With Shadowdom Example1",async({page})=>{
     await page.locator('(//input[@type="checkbox"])[1]').check()
     await page.waitForTimeout(3000)
 })
-test.only("Working With Shadowdom Example2",async({page})=>{
+test("Working With Shadowdom Example2",async({page})=>{
 await page.goto('https://books-pwakit.appspot.com/')
 await page.locator('[id="input"]').fill("telugu")
 await page.locator('[id="input"]').press('Enter')

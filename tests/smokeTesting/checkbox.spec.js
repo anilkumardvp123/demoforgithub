@@ -31,7 +31,7 @@ test.describe("Automation testing", () => {
         }
 
     })
-     test.only("Working With Checkboxesw By using For Loop", async ({ page }) => {
+     test("Working With Checkboxesw By using For Loop", async ({ page }) => {
         await page.goto("https://testautomationpractice.blogspot.com/")
        const checkboxes = await page.$$('[type="checkbox"]')
         for (let checkbox of checkboxes) {

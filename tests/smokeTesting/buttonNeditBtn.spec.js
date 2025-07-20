@@ -4,7 +4,7 @@ test("Working With Buttons",async({page})=>{
     await page.locator('[href="/python/"]').click({force:true})
     await page.waitForTimeout(2000)
 })
-test.only('Verify clicking on Edit box element ', async ({ page }) => {
+test('Verify clicking on Edit box element ', async ({ page }) => {
 
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 

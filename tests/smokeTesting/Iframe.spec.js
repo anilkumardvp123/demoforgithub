@@ -35,7 +35,7 @@ test('Working With Neasted Iframe ', async ({ page }) => {
    await page.waitForTimeout(2000)
 
 })
-test.only("Working With Neasted Iframe in different Applications",async({page})=>{
+test("Working With Neasted Iframe in different Applications",async({page})=>{
     await page.goto('https://www.dezlearn.com/nested-iframes-example/')
     //const parentframe=await page.frame({url:'https://www.dezlearn.com/wp-content/uploads/2021/03/nested-iframes.html'})
     //const parentframe=await page.frameLocator('[id="iframe1"]').frameLocator()

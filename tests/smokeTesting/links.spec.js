@@ -7,7 +7,7 @@ test.describe("Working with Elements",()=>{
         await page.getByTestId('username').fill('asdfghgfds@12342')
         await page.waitForTimeout(2000) 
        })
-       test.only("Working with Links",async({page})=>{
+       test("Working with Links",async({page})=>{
         await page.goto("https://www.wikipedia.org/")
        const links= await page.locator('//a')
        //await expect(await page.locator('//a')).toHaveCount(371)

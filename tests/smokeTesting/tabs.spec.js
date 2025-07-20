@@ -41,7 +41,7 @@ test("working With Tabs -Flipkart Application",async({page})=>{
   await expect(await newpage.locator('[class="iH5ZGp"]')).toHaveText('From Saved Addresses ')
 
 })
-test.only("Working With Tabs flipkart",async({page})=>
+test("Working With Tabs flipkart",async({page})=>
 {
     await page.goto('https://www.flipkart.com/')
     await page.locator('[name="q"]').fill("redmi")

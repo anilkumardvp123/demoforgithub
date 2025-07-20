@@ -11,7 +11,7 @@ test("Working with Alerts",async({page})=>{
    })
    await page.waitForTimeout(3000)
 })
-test.only("Working With Confirm",async({page})=>{
+test("Working With Confirm",async({page})=>{
     page.locator('//button[text()="Click for JS Confirm"]').click()
     page.on("dialog",async dialogg=>{
         expect(dialogg.message()).toContain("I am a JS Confirm")
