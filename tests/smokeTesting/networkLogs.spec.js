@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test'
-test.only('Network logs example', async ({ page }) => {
+test('Network logs example', async ({ page }) => {
   page.on('request', req => {
     console.log(`➡️ ${req.method()} ${req.url()}`);
   });

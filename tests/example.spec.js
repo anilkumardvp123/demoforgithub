@@ -84,7 +84,7 @@ test('block ads and images on Flipkart', async ({ page }) => {
   // Your other test steps here...
 
 });
-test.only('Network logs example', async ({ page }) => {
+test('Network logs example', async ({ page }) => {
   page.on('request', req => {
     console.log(`➡️ ${req.method()} ${req.url()}`);
   });
