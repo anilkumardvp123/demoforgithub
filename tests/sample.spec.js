@@ -25,3 +25,48 @@ test("Minthra Application ",async({page})=>{
     console.log('All Product prices are '+productprices)
    }
 })
+test("Zepto Applications",async({page})=>{
+    await page.goto('https://www.zeptonow.com/')
+   const allitems= await page.locator('[data-slot-id="ProductName"]')
+   const all=await allitems.count()
+   for(let i=0;i<all;i++)
+   {
+    const text=(await allitems.nth(i).textContent())?.trim()
+    console.log(text)
+   }
+})
+
+test("Zepto Applications ",async({page})=>{
+    await page.goto('https://www.zeptonow.com/')
+   const allitems= await page.$$('//div[starts-with(@class,"_base_1i8oq_1 _product-name-container")]')
+   //const all=await allitems.count()
+   for(let item of allitems)
+   {
+    const text=await item.textContent()
+    console.log(text)
+   }
+})
+test.only("Zepto Applications  ", async ({ page }) => {
+  await page.goto('https://www.zeptonow.com/');
+await page.waitForSelector('[data-slot-id="ProductName"]');
+  const allitems = page.locator('[data-slot-id="ProductName"]');
+  const count = await allitems.count();
+
+  for (let i = 0; i < count; i++) {
+    const text = (await allitems.nth(i).textContent())?.trim();
+    console.log(`Item ${i + 1}: ${text}`);
+  }
+});
+
+test("Blinkit application",async ({page})=>{
+    await page.goto('https://blinkit.com/cn/milk/cid/14/922?utm_source=google&utm_medium=cpc&utm_campaign=21439030315&utm_content=169426454132&utm_term=blinkit&gad_source=1&gad_campaignid=21439030315&gbraid=0AAAAADfkql6gfJ05Km1E1TlutAoFjDiXB&gclid=CjwKCAjwtfvEBhAmEiwA-DsKjmtInwwLS5fCBIjVaLIgiKIjQjDuv5DuULBV_UtrkLDTazKOZvcxVhoCdf8QAvD_BwE')
+    const all=await page.$$('[class="tw-text-300 tw-font-semibold tw-line-clamp-2"]')
+    for(let item of all)
+    {
+        var text=await item.textContent()
+        console.log(text)
+        //console.log(text.count())
+    }
+       console.log(text.length)
+
+})

@@ -1,0 +1,22 @@
+arr=[1,2,9,4,5]
+console.log(arr)
+arr1=["raju","anil","li","pop"]
+console.log(arr1)
+arr2=['raju','das',1,6,true,0,99]
+console.log(arr2)
+arr2.push("tarak")
+console.log(arr2)
+arr2.unshift("anill")
+console.log(arr2)
+arr2.pop()
+console.log(arr2)
+arr2.shift()
+console.log(arr2)
+//arr3=arr1+arr2
+arr3=arr1.concat(arr2)
+console.log(arr3)
+arr2.slice("")
+console.log(arr2)
+arr=[1,2,1,2,1,22]
+arr.map(anil =>anil+1)
+console.log(arr)

@@ -1,0 +1,57 @@
+{
+  "valid": [
+    {
+      "username": "Admin",
+      "password": "admin123"
+    },
+     {
+      "username": "Admin",
+      "password": "admin123"
+    },
+     {
+      "username": "Admin",
+      "password": "admin123"
+    },
+     {
+      "username": "Admin",
+      "password": "admin123"
+    },
+     {
+      "username": "Admin",
+      "password": "admin123"
+    },
+     {
+      "username": "Admin",
+      "password": "admin123"
+    }
+      
+  ],
+  "invalidData1": [
+    {
+      "username": "Admin",
+      "password": "admin2123"
+    },
+    {
+      "username": "Admin",
+      "password": "admin2123"
+    }
+  ],
+  "invalidData2": [
+    {
+      "username": "Adrmin",
+      "password": "admin123"
+    }
+  ],
+  "invalidData3": [
+    {
+     "username": "Admtin",
+      "password": "admitn123"
+    },
+    {
+     "username": "Admtin",
+      "password": "admitn123"
+    }
+  ]
+}
+
+

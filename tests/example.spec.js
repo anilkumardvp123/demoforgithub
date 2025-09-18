@@ -1,4 +1,5 @@
 import {test,expect,chromium } from '@playwright/test'
+import { waitForDebugger } from 'inspector'
 test("Login with valid cred",async({page})=>{
    await page.goto('https://www.saucedemo.com/v1/')
    await page.locator('[id="user-name"]').fill('standard_user')
@@ -95,3 +96,21 @@ test('Network logs example', async ({ page }) => {
 
   await page.goto('https://flipkart.com');
 });
+test.only('flipkart applications search box', async ({ page }) => {
+   await page.goto('https://www.flipkart.com/')
+   await page.locator('[placeholder="Search for Products, Brands and More"]').fill('mobile')
+   await page.waitForTimeout(3000)
+ const all=  await page.$$('[class="YGcVZO _2VHNef"]')
+ for(const one of all)
+ {
+  const item= await one.textContent()
+  if('mobile under 10000'==item)
+  {
+   await one.click()
+    break;
+  }
+  console.log(item)
+ }
+//console.log(all)
+
+})

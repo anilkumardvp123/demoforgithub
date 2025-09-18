@@ -37,3 +37,36 @@ import fs from 'fs';
 //   // Optionally verify file exists or contents
 //   expect(fs.existsSync(`downloads/${suggestedFilename}`)).toBe(true);
 //});
+
+test.only("Download a Single file and assert1", async ({ page }) => {
+
+await page.goto('https://commitquality.com/practice-file-download')
+const [downlod]=await Promise.all([
+   page.waitForEvent('download'),
+   page.locator("//button[text()='Download File']").click()
+
+]
+)
+  const savePath = 'downloads/myfile.pdf';  // You can use any path
+  await downlod.saveAs(savePath);
+
+  console.log(`File downloaded to: ${savePath}`);
+
+
+
+})
+
+test('Download a Single file and assert12', async ({ page }) => {
+     await page.goto('https://the-internet.herokuapp.com/download')
+     const files=['LambdaTest.txt','ReadData.xlsx','megadyneBladeHero.jpg']
+     const[download]=await Promise.all([
+      page.waitForEvent('download'),
+     page.locator(`//a[text()="${files[1]}"]`).click()
+          ])
+     const savePath='./downloads/anil.pdf';
+       await download.saveAs(savePath);
+
+  console.log(`File downloaded to: ${savePath}`);
+
+
+})
